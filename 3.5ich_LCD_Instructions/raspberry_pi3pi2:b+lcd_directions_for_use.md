@@ -1,10 +1,10 @@
 #Raspberry PI3PI2/B+LCD Directions for use：
 ---
-##a.the quickly way is that use the complied os image to install on your sd card.（click [rpi_35_v5_jessie8_kernel_4_1_19](https://mega.nz/#!EohikbAJ!TbvPnGggEZfaBsw_6Y49WpAsIb6h4-7MmNgw9Ux5SHY) to download the OS image.）
+##**_(a)_**.the quickly way is that use the complied os image to install on your sd card.（click [rpi_35_v5_jessie8_kernel_4_1_19](https://mega.nz/#!EohikbAJ!TbvPnGggEZfaBsw_6Y49WpAsIb6h4-7MmNgw9Ux5SHY) to download the OS image.）
 
 
 ---
-##b.install the driver as following steps:（click [LCD_show_v5](https://mega.nz/#!chgnDLoA!OIVu199nFAUL9_1i8scDd0gKNcBtEi3NlzxCPVLuDy4) to download the driver file.）
+##**_(b)_**.install the driver as following steps:（click [LCD_show_v5](https://mega.nz/#!chgnDLoA!OIVu199nFAUL9_1i8scDd0gKNcBtEi3NlzxCPVLuDy4) to download the driver file.）
 
  1.Burn write your os image to the SD card, and then reboot the Raspberry Pi
 
@@ -84,4 +84,3 @@ Pins Definition：
 26 ----> LCD_CS
 
 Others are NC！
-
