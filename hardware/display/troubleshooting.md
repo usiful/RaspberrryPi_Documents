@@ -28,6 +28,24 @@ sudo reboot
 * Make sure you've updated Raspbian, see above for steps.
 * Check the smaller ribbon cable is seated properly
 
+If you want to make sure your Pi has detected your touchscreen, try running:
+
+```bash
+dmesg | grep -i ft5406
+```
+
+You should see a couple of lines that look like this:
+
+```text
+[ 5.224267] rpi-ft5406 rpi_ft5406: Probing device
+[ 5.225960] input: FT5406 memory based driver as /devices/virtual/input/input3
+```
+
+A detected touchscreen will also cause the `fbheight` and `fbwidth` parameters in `/proc/cmdline` to equal 480 and 800 respectively ( the resolution of the screen ), you can verify this by running:
+
+```
+cat /proc/cmdline | grep bcm2708_fb
+```
 
 ### My screen is upside-down!
 
@@ -43,7 +61,7 @@ Then add:
 lcd_rotate=2
 ```
 
-Hit `CTRL+C` and `y` to save. And finally:
+Hit `CTRL+X` and `y` to save. And finally:
 
 ```
 sudo reboot
@@ -57,6 +75,7 @@ Don't Panic! This is perfectly normal.
 
 * Make sure you've updated Raspbian, see above for steps.
 * Check the ribbon cable between your Pi and the LCD is properly seated
+* Make sure you have a SD card properly inserted into your Pi.
 
 ### My display is white
 
@@ -80,7 +99,7 @@ This is probably also a side-effect of overscan being enabled, try the solution 
 
 ### My screen isn't working with my old Model B or Model A Pi
 
-At the moment Raspbian isn't compatible with the Model A or B Pi and Touchscreen combo. This will be fixed in time.
+The Model A or B Pi need a couple of extra connections, and an extra line of config. Please see section "Attaching to Model A/B boards" of [the main display page](README.md).
 
 ### Some windows are cut off at the bottom of the screen so I can't use them!
 
@@ -144,7 +163,7 @@ Section "InputClass"
 EndSection
 ```
 
-Hit `CTRL+C` and `y` to save. Then:
+Hit `CTRL+X` and `y` to save. Then:
 
 ```bash
 sudo reboot
